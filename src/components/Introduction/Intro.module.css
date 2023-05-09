@@ -22,6 +22,12 @@
   padding: 10px;
   height: 300px; /* Should be removed. Only for demonstration */
 }
+.column {
+  .column {
+    width: 25%;
+    /* Should be removed. Only for demonstration */
+  }
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -41,8 +47,13 @@ img {
   .column {
     width: 100%;
   }
+  .column {
+    .column {
+      width: 33%;
+    }
+  }
 }
 
-h1{
+h1 {
   font-size: 50px;
 }

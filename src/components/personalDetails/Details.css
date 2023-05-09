@@ -1,0 +1,37 @@
+.row:after {
+  content: "";
+  display: table;
+  text-align: center;
+}
+
+hr {
+  width: 95%;
+  margin-left: 2%;
+}
+
+.column {
+  float: left;
+  width: 33%;
+  padding: 5%;
+  text-align: center;
+  /* Should be removed. Only for demonstration */
+}
+.icons {
+  height: 20px;
+  width: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  .column {
+    .column {
+      width: 33%;
+    }
+  }
+}
+
+h1 {
+  font-size: 50px;
+}
