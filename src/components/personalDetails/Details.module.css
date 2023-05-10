@@ -9,13 +9,14 @@ hr {
   margin-left: 2%;
 }
 
-.column {
+ .column {
   float: left;
   width: 33%;
   padding: 5%;
   text-align: center;
-  /* Should be removed. Only for demonstration */
-}
+ 
+} 
+
 .icons {
   height: 20px;
   width: 20px;

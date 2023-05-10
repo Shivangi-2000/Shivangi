@@ -37,7 +37,7 @@
 }
 img {
   border-radius: 50%;
-  width: 50%;
+  width: 60%;
   height: 100%;
   filter: drop-shadow(10px 10px 10px rgb(144, 150, 144));
 }

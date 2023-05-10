@@ -19,7 +19,7 @@ export default function Intro() {
               is a part of and always love to socialize and experience new
               things in life.
             </p>
-            <div className="column">
+            {/* <div className="column">
               <br></br>
               <div className="row">
                 <div className="column">
@@ -33,7 +33,7 @@ export default function Intro() {
                 </div>
                 
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
