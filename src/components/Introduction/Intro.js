@@ -11,7 +11,7 @@ export default function Intro() {
           </div>
           <div className={classes.column}>
             <h1>Hello!</h1>
-            <h3>A Bit About me</h3>
+            <h3>A Bit About me </h3>
             <p>
               A highly motivated girl, experienced with React JS, JavaScript and
               GIS Development with Strong technical problem solving and Managing
@@ -19,7 +19,7 @@ export default function Intro() {
               is a part of and always love to socialize and experience new
               things in life.
             </p>
-            <div className="column">
+            {/* <div className="column">
               <br></br>
               <div className="row">
                 <div className="column">
@@ -33,7 +33,7 @@ export default function Intro() {
                 </div>
                 
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
