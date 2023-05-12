@@ -14,3 +14,18 @@ hr {
   width: 95%;
   margin-left: 2%;
 }
+ h2{
+  text-align: center;
+  color: brown;
+ }
+
+ @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  .column {
+    .column {
+      width: 50%;
+    }
+  }
+}
