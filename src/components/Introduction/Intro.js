@@ -16,7 +16,7 @@ export default function Intro() {
             <img src="shivangi.jpg" alt="linkedIn" />
           </div>
           <div className={classes.column}>
-            <br></br>
+            <br></br><br></br>
             <h1>Hello!</h1>
             <h3>A Bit About me</h3> <br></br>
             <p>

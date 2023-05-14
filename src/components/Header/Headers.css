@@ -14,7 +14,7 @@
   --textColor: #1a1818;
 }
 .sym {
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .name {
@@ -115,7 +115,9 @@ nav {
     color: var(--textColor);
     text-decoration: none;
   }
-
+  .sym {
+    font-size: 20px;
+  }
   nav a:hover {
     color: var(--secondaryColor);
   }
@@ -143,7 +145,7 @@ nav {
       visibility: visible;
       opacity: 1;
     }
-
+    
     header nav {
       position: fixed;
       top: -100vh;
