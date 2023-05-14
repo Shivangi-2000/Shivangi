@@ -12,7 +12,7 @@ function Headers() {
   return (
     <header>
       <div className="logo">
-        <h2 className="name"><span className="sym">&#8718;</span> Shivangi Gupta &nbsp;</h2>
+        <h2 className="name"><span className="sym">&#8718; Shivangi Gupta &nbsp;</span></h2>
         <p>  Assistant System Engineer </p>
       </div>
       <nav ref={navRef}>
