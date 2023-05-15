@@ -3,7 +3,8 @@ import classes from "./Experience.module.css";
 export default function Experience(props) {
   return (
     <section>
-      <hr></hr><br></br><br></br>
+      <br></br><br></br>
+      <h1>Resume</h1><br></br>
       <div className={classes.row}>
         <div className={classes.column}><br></br><h2>Experience</h2></div>
         <div className={classes.column}>
@@ -15,7 +16,7 @@ export default function Experience(props) {
             
           ))}
         </div>
-      </div><br></br><br></br>
+      </div><br></br><br></br><hr></hr>
     </section>
   )
 }

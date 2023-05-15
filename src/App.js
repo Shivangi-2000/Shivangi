@@ -7,6 +7,7 @@ import Details from "./components/personalDetails/Details";
 import Experience from "./components/Experiences/Experience";
 import Highlight from "./components/Highlight/Highlight";
 import Project from "./components/Projects/Project";
+import SmoothRender from "react-smooth-render";
 
 function App() {
   const [degree, setDegree] = useState([]);
@@ -14,6 +15,10 @@ function App() {
   const [highlight, setHighlight] = useState([]);
   const [project, setProject] = useState([]);
   const [isLodding, setIsLoadding] = useState(false);
+  const [isProjectClicked, setIsProjectClicked] = useState(false);
+  const [isResumeClicked, setIsResumeClicked] = useState(false);
+  const [isHomeClicked, setIsHomeClicked] = useState(true);
+  //const [isProjectClicked, setIsProjectClicked] = useState(false);
 
   const fetchEducationHandler = useCallback(async () => {
     setIsLoadding(true);
@@ -56,8 +61,6 @@ function App() {
     setIsLoadding(false);
   }, []);
 
-
-
   const fetchHighlightHandler = useCallback(async () => {
     setIsLoadding(true);
     const response = await fetch(
@@ -75,7 +78,6 @@ function App() {
     setHighlight(loadedData);
     setIsLoadding(false);
   }, []);
-
 
   const fetchProjectHandler = useCallback(async () => {
     setIsLoadding(true);
@@ -96,36 +98,71 @@ function App() {
     setIsLoadding(false);
   }, []);
 
+  const onClickProject = (isClicked) => {
+    setIsProjectClicked(isClicked);
+    setIsResumeClicked(false);
+    setIsHomeClicked(false);
+  };
+  const onClickResume = (isClicked) => {
+    setIsProjectClicked(false);
+    setIsResumeClicked(isClicked);
+    setIsHomeClicked(false);
+  };
 
-
+  const onClickHome = (isClicked) => {
+    setIsHomeClicked(isClicked);
+    setIsProjectClicked(false);
+    setIsResumeClicked(false);
+  };
 
   useEffect(() => {
     fetchEducationHandler();
     fetchExperienceHandler();
     fetchHighlightHandler();
-    fetchProjectHandler()
-  }, [fetchEducationHandler, fetchExperienceHandler, fetchHighlightHandler, fetchProjectHandler]);
+    fetchProjectHandler();
+  }, [
+    fetchEducationHandler,
+    fetchExperienceHandler,
+    fetchHighlightHandler,
+    fetchProjectHandler,
+  ]);
 
   return (
     <div>
-      <Header />
-      <Intro />
+      <Header
+        onProject={onClickProject}
+        onResume={onClickResume}
+        onHome={onClickHome}
+      />
+
       <section>
-        {!isLodding && <Experience experience={experience} />}
+        {!isLodding && isHomeClicked && <Intro />}
         {isLodding && <p>Lodding...</p>}
       </section>
-      <section>
-        {!isLodding && <Education degree={degree} />}
-        {isLodding && <p>Lodding...</p>}
-      </section>
-      <section>
-        {!isLodding && <Highlight highlight={highlight} />}
-        {isLodding && <p>Lodding...</p>}
-      </section>
-      <section>
-        {!isLodding && <Project project={project} />}
-        {isLodding && <p>Lodding...</p>}
-      </section>
+
+      <SmoothRender hidden={!isResumeClicked} timing={1000}>
+        <section>
+          {!isLodding && isResumeClicked && (
+            <Experience experience={experience} />
+          )}
+          {isLodding && <p>Lodding...</p>}
+        </section>
+        <section>
+          {!isLodding && isResumeClicked && <Education degree={degree} />}
+          {isLodding && <p>Lodding...</p>}
+        </section>
+        <section>
+          {!isLodding && isResumeClicked && <Highlight highlight={highlight} />}
+          {isLodding && <p>Lodding...</p>}
+        </section>
+      </SmoothRender>
+      <SmoothRender hidden={!isProjectClicked} timing={1000}>
+        <section>
+          {!isLodding && isProjectClicked && <Project project={project} />}
+          {isLodding && <p>Lodding...</p>}
+        </section>
+      </SmoothRender>
+
       <Details />
     </div>
   );
