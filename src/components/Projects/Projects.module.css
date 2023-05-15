@@ -1,4 +1,6 @@
-
+.project{
+  animation: project-appear 1s ;
+}
   .column {
     float: left;
     width: 50%;
@@ -59,4 +61,14 @@
     font-size: 50px;
     text-align: center;
   }
-  
+  @keyframes project-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
