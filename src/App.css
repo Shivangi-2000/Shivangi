@@ -4,3 +4,11 @@
   --secondaryColor: #a7898b;
   --textColor: #1a1818;
 }
+
+.load{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: calc(50% - 50px);
+  top:calc(50% - 50px);
+}

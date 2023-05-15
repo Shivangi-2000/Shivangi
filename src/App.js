@@ -7,7 +7,6 @@ import Details from "./components/personalDetails/Details";
 import Experience from "./components/Experiences/Experience";
 import Highlight from "./components/Highlight/Highlight";
 import Project from "./components/Projects/Project";
-import SmoothRender from "react-smooth-render";
 
 function App() {
   const [degree, setDegree] = useState([]);
@@ -128,43 +127,39 @@ function App() {
   ]);
 
   return (
+    <>
+    {isLodding && <img src="loadingWheel.gif" alt="loading" className="load"/>}
     <div>
-      <Header
+      {!isLodding && <Header
         onProject={onClickProject}
         onResume={onClickResume}
         onHome={onClickHome}
-      />
+      />}
 
       <section>
         {!isLodding && isHomeClicked && <Intro />}
-        {isLodding && <p>Lodding...</p>}
+        
       </section>
 
-      <SmoothRender hidden={!isResumeClicked} timing={1000}>
-        <section>
-          {!isLodding && isResumeClicked && (
-            <Experience experience={experience} />
-          )}
-          {isLodding && <p>Lodding...</p>}
-        </section>
-        <section>
-          {!isLodding && isResumeClicked && <Education degree={degree} />}
-          {isLodding && <p>Lodding...</p>}
-        </section>
-        <section>
-          {!isLodding && isResumeClicked && <Highlight highlight={highlight} />}
-          {isLodding && <p>Lodding...</p>}
-        </section>
-      </SmoothRender>
-      <SmoothRender hidden={!isProjectClicked} timing={1000}>
-        <section>
-          {!isLodding && isProjectClicked && <Project project={project} />}
-          {isLodding && <p>Lodding...</p>}
-        </section>
-      </SmoothRender>
+      <section >
+        {!isLodding && isResumeClicked && (
+          <Experience experience={experience} />
+        )}
 
-      <Details />
+        {!isLodding && isResumeClicked && <Education degree={degree} />}
+
+        {!isLodding && isResumeClicked && <Highlight highlight={highlight} />}
+        
+      </section>
+
+      <section>
+        {!isLodding && isProjectClicked && <Project project={project} />}
+        
+      </section>
+
+      {!isLodding && <Details />}
     </div>
+    </>
   );
 }
 

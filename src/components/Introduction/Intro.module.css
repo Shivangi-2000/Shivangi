@@ -1,6 +1,6 @@
 .summary {
   text-align: center;
-  
+  animation: summary-appear 1s ;
   
 }
 
@@ -48,4 +48,16 @@ img {
 
 h1 {
   font-size: 50px;
+}
+
+@keyframes summary-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

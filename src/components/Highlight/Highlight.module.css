@@ -1,3 +1,18 @@
+.highlight{
+  animation: highlight-appear 1s ;
+}
+@keyframes highlight-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .row:after {
     content: "";
     display: table;

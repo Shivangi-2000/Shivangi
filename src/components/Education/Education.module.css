@@ -1,3 +1,20 @@
+.education{
+  animation: education-appear 1s ;
+}
+@keyframes education-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
 .row:after {
   content: "";
   display: table;

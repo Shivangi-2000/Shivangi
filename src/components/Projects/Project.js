@@ -5,14 +5,14 @@ export default function Project(props) {
   let count = 1;
   return (
     <>
-      <section>
+      <section className={classes.project}>
         
         <br></br>
         <br></br>
         <h1>Projects</h1>
         <br></br>
         {props.project.map((p) => (
-          <div className={classes.row}>
+          <div className={classes.row} key={p.id}>
             <br></br>
             <div className={classes.column}><h3 className={classes.hs}> {count++}. <b>Name: {p.name}</b></h3></div>
             <div className={classes.column}>
