@@ -6,10 +6,11 @@ export default function Project(props) {
   return (
     <>
       <section>
-        <hr></hr>
+        
         <br></br>
         <br></br>
-        <h2>Projects</h2>
+        <h1>Projects</h1>
+        <br></br>
         {props.project.map((p) => (
           <div className={classes.row}>
             <br></br>
@@ -29,7 +30,7 @@ export default function Project(props) {
       <br></br>
       <br></br>
       <br></br>
-      <br></br>
+      <br></br><hr></hr>
     </>
   );
 }

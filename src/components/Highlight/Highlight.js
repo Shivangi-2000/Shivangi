@@ -3,7 +3,7 @@ import classes from "./Highlight.module.css";
 export default function Highlight(props) {
   return (
     <section>
-      <hr></hr><br></br><br></br>
+      <br></br><br></br>
       <div className={classes.row}>
         <div className={classes.column}><br></br><h2>Career highlights</h2></div>
         <div className={classes.column}>
@@ -15,6 +15,7 @@ export default function Highlight(props) {
           ))}
         </div>
       </div><br></br><br></br>
+      <hr></hr>
     </section>
   )
 }

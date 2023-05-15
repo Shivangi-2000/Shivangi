@@ -3,7 +3,7 @@ import classes from "./Education.module.css";
 export default function Education(props) {
   return (
     <section>
-      <hr></hr><br></br><br></br>
+      <br></br><br></br>
       <div className={classes.row}>
         <div className={classes.column}><h2>Education</h2></div>
         <div className={classes.column}>
@@ -15,7 +15,7 @@ export default function Education(props) {
             
           ))}
         </div>
-      </div><br></br><br></br>
+      </div><br></br><br></br><hr></hr>
     </section>
   );
 }

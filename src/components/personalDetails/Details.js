@@ -4,7 +4,7 @@ import classes from "./Details.module.css";
 export default function Details() {
   return (
     <section>
-      <hr></hr>
+      
       <div className={classes.row}>
         <div className={classes.column}>
           <b>Phone</b>
