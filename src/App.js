@@ -17,8 +17,26 @@ function App() {
   const [isProjectClicked, setIsProjectClicked] = useState(false);
   const [isResumeClicked, setIsResumeClicked] = useState(false);
   const [isHomeClicked, setIsHomeClicked] = useState(true);
-  //const [isProjectClicked, setIsProjectClicked] = useState(false);
+  const [personalDetail, setPersonalDetail] = useState([]);
 
+  // Fetch personal details
+  const fetchPersonalDetailHandler = useCallback(async () => {
+    setIsLoadding(true);
+    const response = await fetch(
+      "https://resume-http-default-rtdb.firebaseio.com/personalDetails.json"
+    );
+    const data = await response.json();
+    const loadedData = [];
+
+    for (const key in data) {
+      loadedData.push(data[key]);
+    }
+
+    setPersonalDetail(loadedData);
+    setIsLoadding(false);
+  }, []);
+
+  // Fetch Educational details
   const fetchEducationHandler = useCallback(async () => {
     setIsLoadding(true);
     const response = await fetch(
@@ -40,6 +58,7 @@ function App() {
     setIsLoadding(false);
   }, []);
 
+  // Fetch Experience details
   const fetchExperienceHandler = useCallback(async () => {
     setIsLoadding(true);
     const response = await fetch(
@@ -60,6 +79,7 @@ function App() {
     setIsLoadding(false);
   }, []);
 
+  // Fetch career highlights details
   const fetchHighlightHandler = useCallback(async () => {
     setIsLoadding(true);
     const response = await fetch(
@@ -78,6 +98,7 @@ function App() {
     setIsLoadding(false);
   }, []);
 
+  // Fetch all the projects details
   const fetchProjectHandler = useCallback(async () => {
     setIsLoadding(true);
     const response = await fetch(
@@ -115,11 +136,13 @@ function App() {
   };
 
   useEffect(() => {
+    fetchPersonalDetailHandler();
     fetchEducationHandler();
     fetchExperienceHandler();
     fetchHighlightHandler();
     fetchProjectHandler();
   }, [
+    fetchPersonalDetailHandler,
     fetchEducationHandler,
     fetchExperienceHandler,
     fetchHighlightHandler,
@@ -128,37 +151,37 @@ function App() {
 
   return (
     <>
-    {isLodding && <img src="loadingWheel.gif" alt="loading" className="load"/>}
-    <div>
-      {!isLodding && <Header
-        onProject={onClickProject}
-        onResume={onClickResume}
-        onHome={onClickHome}
-      />}
-
-      <section>
-        {!isLodding && isHomeClicked && <Intro />}
-        
-      </section>
-
-      <section >
-        {!isLodding && isResumeClicked && (
-          <Experience experience={experience} />
+      {isLodding && (
+        <img src="loadingWheel.gif" alt="loading" className="load" />
+      )}
+      <div>
+        {!isLodding && (
+          <Header
+            onProject={onClickProject}
+            onResume={onClickResume}
+            onHome={onClickHome}
+            detail={personalDetail}
+          />
         )}
 
-        {!isLodding && isResumeClicked && <Education degree={degree} />}
+        <section>{!isLodding && isHomeClicked && <Intro />}</section>
 
-        {!isLodding && isResumeClicked && <Highlight highlight={highlight} />}
-        
-      </section>
+        <section>
+          {!isLodding && isResumeClicked && (
+            <Experience experience={experience} />
+          )}
 
-      <section>
-        {!isLodding && isProjectClicked && <Project project={project} />}
-        
-      </section>
+          {!isLodding && isResumeClicked && <Education degree={degree} />}
 
-      {!isLodding && <Details />}
-    </div>
+          {!isLodding && isResumeClicked && <Highlight highlight={highlight} />}
+        </section>
+
+        <section>
+          {!isLodding && isProjectClicked && <Project project={project} />}
+        </section>
+
+        {!isLodding && <Details detail={personalDetail}/>}
+      </div>
     </>
   );
 }

@@ -29,7 +29,7 @@ function Headers(props) {
         <h2 className={classes.name}>
           <span className={classes.sym}> Shivangi Gupta &nbsp;</span>
         </h2>
-        <p>Assistant System Engineer </p>
+        <p>{props.detail[5]} </p>
       </div>
       <nav ref={navRef}>
         <a href="/#" onClick={homeHandler}>

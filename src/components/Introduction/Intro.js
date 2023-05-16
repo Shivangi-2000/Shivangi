@@ -11,7 +11,7 @@ export default function Intro() {
         <div className={classes.row}>
           <div className={classes.column}>
             <img src="shivangi.jpg" alt="linkedIn" />
-          </div>
+          </div><br></br><br></br>
           <div className={classes.column}>
             <br></br>
             <br></br>
@@ -21,8 +21,8 @@ export default function Intro() {
             <p>
               A highly motivated girl, experienced with React JS, JavaScript and
               GIS Development with Strong technical problem solving and Managing
-              skills, who like to create Impact to the organization / work she
-              is a part of and always love to socialize and experience new
+              skills, who like to create Impact to the organization / work I
+              am a part of and always love to socialize and experience new
               things in life.
             </p>
           </div>
