@@ -30,6 +30,7 @@ img {
   width: 70%;
   height: 155%;
   transition: 0.5s;
+  animation: im-appear 1s;
 }
 img:hover {
   opacity: 0.5;
@@ -65,6 +66,17 @@ h1 {
   from {
     opacity: 0;
     transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes im-appear {
+  from {
+    opacity: 0;
+    transform: translateY(5rem);
   }
 
   to {
