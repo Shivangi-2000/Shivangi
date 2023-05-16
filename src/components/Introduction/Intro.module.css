@@ -1,12 +1,10 @@
 .summary {
   text-align: center;
-  animation: summary-appear 1s ;
-  
+  animation: summary-appear 1s;
 }
 
 .summary h2 {
   font-size: 2rem;
-  
 }
 .column {
   float: left;
@@ -29,10 +27,16 @@
 }
 img {
   border-radius: 50%;
-  width: 60%;
-  height: 130%;
-  
+  width: 70%;
+  height: 155%;
+  transition: 0.5s;
 }
+img:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -43,6 +47,13 @@ img {
     .column {
       width: 33%;
     }
+  }
+
+  img {
+    border-radius: 8%;
+    width: 80%;
+    height: 135%;
+    
   }
 }
 
@@ -61,3 +72,4 @@ h1 {
     transform: translateY(0);
   }
 }
+
