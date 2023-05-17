@@ -8,7 +8,9 @@ hr {
   width: 95%;
   margin-left: 2%;
 }
-
+.links{
+  color: black;
+}
  .column {
   float: left;
   width: 33%;

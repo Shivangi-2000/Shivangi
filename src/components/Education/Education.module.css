@@ -1,5 +1,5 @@
-.education{
-  animation: education-appear 1s ;
+.education {
+  animation: education-appear 1s;
 }
 @keyframes education-appear {
   from {
@@ -12,8 +12,9 @@
     transform: translateY(0);
   }
 }
-
-
+.calender {
+  color: gray;
+}
 
 .row:after {
   content: "";
@@ -21,9 +22,9 @@
   clear: both;
 }
 .column {
-    float: left;
-    width: 50%;
-    padding: 10px;
+  float: left;
+  width: 50%;
+  padding: 10px;
 
   /* Should be removed. Only for demonstration */
 }
@@ -31,12 +32,12 @@ hr {
   width: 95%;
   margin-left: 2%;
 }
- h2{
+h2 {
   text-align: center;
   color: brown;
- }
+}
 
- @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .column {
     width: 100%;
   }

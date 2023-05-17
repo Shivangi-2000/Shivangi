@@ -1,45 +1,50 @@
 import React from "react";
 import classes from "./Details.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPhone,
+  faMailBulk,
+  faPersonRifle,
+} from "@fortawesome/free-solid-svg-icons";
+import { FaGithub, FaHackerrank, FaLinkedin } from "react-icons/fa";
 
 export default function Details(props) {
   return (
     <section>
       <div className={classes.row}>
         <div className={classes.column}>
-          <b>Phone</b>
+          <b>
+            Phone <FontAwesomeIcon icon={faPhone} />
+          </b>
           <br></br>
           {props.detail[4]}
         </div>
         <div className={classes.column}>
-          <b>Email</b>
+          <b>
+            Email <FontAwesomeIcon icon={faMailBulk} />
+          </b>
           <br></br>
           {props.detail[0]}
         </div>
         <div className={classes.column}>
-          <b>Profiles</b>
+          <b>
+            Profiles <FontAwesomeIcon icon={faPersonRifle} />
+          </b>
           <br></br>
           <div className={classes.row}>
             <div className={classes.column}>
               <a href={props.detail[3]} target="_blank" rel="noreferrer">
-                <img
-                  className={classes.icons}
-                  src="linkedIn.png"
-                  alt="linkedIn"
-                />
+                <FaLinkedin className={classes.links}/>
               </a>
             </div>
             <div className={classes.column}>
               <a href={props.detail[1]} target="_blank" rel="noreferrer">
-                <img className={classes.icons} src="github.png" alt="github" />
+                <FaGithub className={classes.links}/>
               </a>
             </div>
             <div className={classes.column}>
               <a href={props.detail[2]} target="_blank" rel="noreferrer">
-                <img
-                  className={classes.icons}
-                  src="hackerrank.png"
-                  alt="linkedIn"
-                />
+                <FaHackerrank className={classes.links}/>
               </a>
             </div>
           </div>
