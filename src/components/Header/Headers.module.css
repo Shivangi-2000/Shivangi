@@ -22,7 +22,9 @@
   font-size: 26px;
 }
 
-
+.icons{
+  color: gray;
+}
 .name {
   color: brown;
   align-items: baseline;

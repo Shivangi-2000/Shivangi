@@ -10,7 +10,7 @@ export default function Intro() {
         <br></br>
         <div className={classes.row}>
           <div className={classes.column}>
-            <img src="shivangi.jpg" alt="linkedIn" />
+            <img src="shivangi.jpg" alt="profile" />
           </div><br></br><br></br>
           <div className={classes.column}>
             <br></br>

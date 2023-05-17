@@ -1,5 +1,9 @@
-import React from 'react'
+import React  from 'react'
 import classes from "./Highlight.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrophy } from '@fortawesome/free-solid-svg-icons'
+
+
 export default function Highlight(props) {
   return (
     <section className={classes.highlight}>
@@ -9,7 +13,7 @@ export default function Highlight(props) {
         <div className={classes.column}>
           {props.highlight.map((hl) => (
             <div className={classes.row} key={hl.id}><br></br>
-              <div className={classes.column}><b>{hl.title}</b><br></br>{hl.description}</div>
+              <div className={classes.column}><b>{hl.title} <FontAwesomeIcon icon={faTrophy} /></b><br></br>{hl.description}</div>
             </div>
             
           ))}

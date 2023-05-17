@@ -1,7 +1,8 @@
 import { useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars , FaTimes } from "react-icons/fa";
 import classes from "./Headers.module.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {  faHome, faReceipt, faRobot, faUser } from '@fortawesome/free-solid-svg-icons'
 function Headers(props) {
   const navRef = useRef();
 
@@ -27,19 +28,19 @@ function Headers(props) {
     <header >
       <div className={classes.logo}>
         <h2 className={classes.name}>
-          <span className={classes.sym}> Shivangi Gupta &nbsp;</span>
+          <span className={classes.sym}><FontAwesomeIcon icon={faUser} />  Shivangi Gupta &nbsp;</span>
         </h2>
         <p>{props.detail[5]} </p>
       </div>
       <nav ref={navRef}>
         <a href="/#" onClick={homeHandler}>
-          Home
+          Home <FontAwesomeIcon icon={faHome} className={classes.icons}/>
         </a>
         <a href="/#" onClick={resumeHandler}>
-          Resume
+          Resume <FontAwesomeIcon icon={faReceipt} className={classes.icons}/>
         </a>
         <a href="/#" onClick={projectHandler}>
-          Projects
+          Projects <FontAwesomeIcon icon={faRobot} className={classes.icons}/>
         </a>
 
         <button

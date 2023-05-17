@@ -12,7 +12,9 @@
     transform: translateY(0);
   }
 }
-
+.calender{
+  color: gray;
+}
 
 .row:after {
     content: "";
