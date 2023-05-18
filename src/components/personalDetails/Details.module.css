@@ -23,15 +23,13 @@ hr {
   height: 20px;
   width: 20px;
 }
-
+/* @media only screen and (max-width: 1024px) { */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
   }
-  .column {
-    .column {
+  .column1 {
       width: 33%;
-    }
   }
 }
 

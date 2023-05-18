@@ -33,13 +33,13 @@ function Headers(props) {
         <p>{props.detail[5]} </p>
       </div>
       <nav ref={navRef}>
-        <a href="/#" onClick={homeHandler}>
+        <a href="/Shivangi/#" onClick={homeHandler}>
           Home <FontAwesomeIcon icon={faHome} className={classes.icons}/>
         </a>
-        <a href="/#" onClick={resumeHandler}>
+        <a href="/Shivangi/#" onClick={resumeHandler}>
           Resume <FontAwesomeIcon icon={faReceipt} className={classes.icons}/>
         </a>
-        <a href="/#" onClick={projectHandler}>
+        <a href="/Shivangi/#" onClick={projectHandler}>
           Projects <FontAwesomeIcon icon={faRobot} className={classes.icons}/>
         </a>
 
