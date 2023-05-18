@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Shivangi/static/css/main.93d993af.css",
+    "main.js": "/Shivangi/static/js/main.7b2cd0d9.js",
+    "static/js/787.d8e16277.chunk.js": "/Shivangi/static/js/787.d8e16277.chunk.js",
+    "index.html": "/Shivangi/index.html",
+    "main.93d993af.css.map": "/Shivangi/static/css/main.93d993af.css.map",
+    "main.7b2cd0d9.js.map": "/Shivangi/static/js/main.7b2cd0d9.js.map",
+    "787.d8e16277.chunk.js.map": "/Shivangi/static/js/787.d8e16277.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93d993af.css",
+    "static/js/main.7b2cd0d9.js"
+  ]
+}
