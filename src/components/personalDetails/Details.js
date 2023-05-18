@@ -32,17 +32,17 @@ export default function Details(props) {
           </b>
           <br></br>
           <div className={classes.row}>
-            <div className={classes.column}>
+            <div className={`${classes.column} ${classes.column1}`}>
               <a href={props.detail[3]} target="_blank" rel="noreferrer">
                 <FaLinkedin className={classes.links}/>
               </a>
             </div>
-            <div className={classes.column}>
+            <div className={`${classes.column} ${classes.column1}`}>
               <a href={props.detail[1]} target="_blank" rel="noreferrer">
                 <FaGithub className={classes.links}/>
               </a>
             </div>
-            <div className={classes.column}>
+            <div className={`${classes.column} ${classes.column1}`}>
               <a href={props.detail[2]} target="_blank" rel="noreferrer">
                 <FaHackerrank className={classes.links}/>
               </a>

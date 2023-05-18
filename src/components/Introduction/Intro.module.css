@@ -12,12 +12,12 @@
   padding: 10px;
   height: 300px; /* Should be removed. Only for demonstration */
 }
-.column {
+/* .column {
   .column {
     width: 25%;
-    /* Should be removed. Only for demonstration */
+    /* Should be removed. Only for demonstration 
   }
-}
+} */
 
 /* Clear floats after the columns */
 .row:after {
@@ -40,20 +40,21 @@ img:hover {
 
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* @media only screen and (max-width: 1024px) { */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
   }
-  .column {
+  /* .column {
     .column {
       width: 33%;
     }
-  }
+  } */
 
   img {
-    border-radius: 8%;
-    width: 80%;
-    height: 135%;
+    border-radius: 50%;
+    width: 95%;
+    height: 125%;
     
   }
 }
